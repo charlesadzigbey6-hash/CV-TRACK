@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Générateur de CV Pro</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>Générateur de CV Professionnel</h1>
+</header>
+
+<div class="container">
+
+  <!-- Formulaire -->
+  <div class="form">
+    <h2>Remplis tes informations</h2>
+
+    <input type="text" id="nom" placeholder="Nom">
+    <input type="text" id="metier" placeholder="Métier (ex: Créateur digital)">
+    <input type="email" id="email" placeholder="Email">
+    <input type="text" id="telephone" placeholder="Téléphone">
+
+    <textarea id="profil" placeholder="Profil"></textarea>
+    <textarea id="experience" placeholder="Expériences / Projets"></textarea>
+    <textarea id="education" placeholder="Éducation"></textarea>
+    <textarea id="competences" placeholder="Compétences"></textarea>
+    <textarea id="interets" placeholder="Centres d’intérêt"></textarea>
+
+    <label for="photo">Photo de profil :</label>
+    <input type="file" id="photo" accept="image/*">
+
+    <button onclick="genererCV()">Générer CV</button>
+  </div>
+
+  <!-- CV affiché -->
+  <div class="cv" id="cv">
+    <div class="cv-header">
+      <img id="cvPhoto" alt="Photo">
+      <div>
+        <h2 id="cvNom"></h2>
+        <p id="cvMetier"></p>
+        <p id="cvEmail"></p>
+        <p id="cvTelephone"></p>
+      </div>
+    </div>
+
+    <div class="cv-section">
+      <h3>Profil</h3>
+      <p id="cvProfil"></p>
+    </div>
+
+    <div class="cv-section">
+      <h3>Expériences / Projets</h3>
+      <p id="cvExperience"></p>
+    </div>
+
+    <div class="cv-section">
+      <h3>Éducation</h3>
+      <p id="cvEducation"></p>
+    </div>
+
+    <div class="cv-section">
+      <h3>Compétences</h3>
+      <p id="cvCompetences"></p>
+    </div>
+
+    <div class="cv-section">
+      <h3>Centres d’intérêt</h3>
+      <p id="cvInterets"></p>
+    </div>
+
+    <button onclick="downloadCV()">Télécharger en PDF</button>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</body>
+</html>

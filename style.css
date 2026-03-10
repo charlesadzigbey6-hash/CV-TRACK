@@ -1,0 +1,141 @@
+/* Global */
+body{
+  font-family: 'Segoe UI', sans-serif;
+  background: #f0f2f5;
+  margin: 0;
+  padding: 0;
+}
+
+header{
+  text-align: center;
+  padding: 20px 0;
+  background: #1f2937;
+  color: white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.container{
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Formulaire */
+.form{
+  width: 350px;
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.form h2{
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form input, .form textarea{
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.form button{
+  width: 100%;
+  padding: 12px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.form button:hover{
+  background: #1d4ed8;
+}
+
+/* CV */
+.cv{
+  width: 600px;
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+
+.cv-header{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border-bottom: 2px solid #2563eb;
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+}
+
+.cv-header img{
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #2563eb;
+}
+
+.cv-header h2{
+  margin: 0;
+  font-size: 24px;
+}
+
+.cv-header p{
+  margin: 4px 0;
+  color: #555;
+}
+
+.cv-section{
+  margin-bottom: 20px;
+}
+
+.cv-section h3{
+  color: #2563eb;
+  margin-bottom: 8px;
+}
+
+.cv-section p{
+  color: #333;
+  line-height: 1.5;
+}
+
+.cv button{
+  background: #10b981;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.cv button:hover{
+  background: #059669;
+}
+
+/* Responsive */
+@media(max-width: 1000px){
+  .container{
+    flex-direction: column;
+    align-items: center;
+  }
+  .cv{
+    width: 90%;
+  }
+  .form{
+    width: 90%;
+  }
+}
